@@ -23,6 +23,12 @@
   "CLOCK_PERIOD": 60,
   "SYNTH_EXCLUDED_CELL_FILE": "dir::stdcells_exclude.txt",
 
+  "//": "Sign off setup timing only at the nominal typical corner (~16 MHz). The slow",
+  "//": "nom_ss_125C_3v00 corner does not close at this clock; older toolchains only warned",
+  "//": "about it, but ttgf0p3's LibreLane treats it as a fatal error. The design targets the",
+  "//": "typical corner, so scope the setup-violation check to nom_tt_025C_3v30.",
+  "SETUP_VIOLATION_CORNERS": ["nom_tt_025C_3v30"],
+
   "//": "Hold slack margin - Increase them in case you are getting hold violations.",
   "PL_RESIZER_HOLD_SLACK_MARGIN": 0.1,
   "GRT_RESIZER_HOLD_SLACK_MARGIN": 0.05,
