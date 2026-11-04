@@ -29,7 +29,7 @@
 
   "//": "Sign off setup timing only at the nominal typical corner (~16 MHz). The slow",
   "//": "nom_ss_125C_3v00 corner does not close at this clock; older toolchains only warned",
-  "//": "about it, but ttgf0p3's LibreLane treats it as a fatal error. The design targets the",
+  "//": "about it, but LibreLane 3.x treats it as a fatal error. The design targets the",
   "//": "typical corner, so scope the setup-violation check to nom_tt_025C_3v30.",
   "SETUP_VIOLATION_CORNERS": ["nom_tt_025C_3v30"],
 
