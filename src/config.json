@@ -25,6 +25,9 @@
   "//": "CLOCK_PERIOD - Increase this in case you are getting setup time violations.",
   "//": "The value is in nanoseconds, so 62.5ns == 16MHz (matches clock_hz in info.yaml).",
   "CLOCK_PERIOD": 62.5,
+  "//": "Extra timing repair after global routing (setup closes only with a small margin)",
+  "RUN_POST_GRT_RESIZER_TIMING": 1,
+
   "SYNTH_EXCLUDED_CELL_FILE": "dir::stdcells_exclude.txt",
 
   "//": "Sign off setup timing only at the nominal typical corner (~16 MHz). The slow",
